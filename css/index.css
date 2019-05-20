@@ -7,8 +7,15 @@
 .ui-navbar {
     border-top: 1px solid #222;
 }
+h1 {
+    margin: 8px 
+}
 h3 {
     color: #222;
+}
+h4 {
+    margin-top: 0;
+    color: lightgray;
 }
 .clock-btns {
     display: flex;
@@ -30,10 +37,20 @@ h3 {
 #clock-out {
     display: none;
     width: 50%;
-    color: white;
+    color: lightgray;
     background: #FF4C4C;
 }
 #clock-out:hover {
-    color: #222;
+    color: white;
     background: #FF6F6F;
+}
+span {
+    color: gray;
+}
+.today {
+    color: gray;
+    margin-top: 0;
+}
+.time-box {
+    padding: 0px 40px;
 }

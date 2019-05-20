@@ -17,19 +17,23 @@
 		<!-- Home Page -->
 		<div data-role="content">
 			<h4>Home</h4>
-			<div class="clock-btns">
-				<button id="clock-in" class="clock-btn">Clock-In</button>
-				<button id="clock-out" class="clock-btn">Clock-Out</button>
-			</div>
-			<div class="times">
-				<h3>Time In</h3>
-				<span class="time-in">00:00</span>
-				<hr>
-				<h3>Time Out</h3>
-				<span class="time-out">00:00</span>
-				<hr>
-				<h1>Total</h1>
-				<hr>
+			<h6 class="today"></h6>
+			<div class="time-box">
+				<div class="times-container">
+					<h3>Time In</h3>
+					<span class="time-in">00:00:00</span>
+					<hr>
+					<h3>Time Out</h3>
+					<span class="time-out">00:00:00</span>
+					<hr>
+					<h1>Total</h1>
+					<span class="total">0 hours, 0 mintues, 0 seconds</span>
+					<hr>
+				</div>
+				<div class="clock-btns">
+					<button id="clock-in" class="clock-btn">Clock-In</button>
+					<button id="clock-out" class="clock-btn">Clock-Out</button>
+				</div>
 			</div>
 		</div>
 		<div data-role="footer" data-id="home" data-position="fixed">
@@ -46,6 +50,7 @@
 		<!-- Settings Page -->
 		<div data-role="content">
 			<h4>Settings</h4>
+			<h6 class="today"></h6>
 		</div>
 		<div data-role="footer" data-id="settings" data-position="fixed">
 			<div data-role="navbar">
@@ -61,6 +66,7 @@
 		<!-- History Page -->
 		<div data-role="content">
 			<h4>History</h4>
+			<h6 class="today"></h6>
 		</div>
 		<div data-role="footer" data-id="history" data-position="fixed">
 			<div data-role="navbar">
