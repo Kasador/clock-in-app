@@ -1,21 +1,39 @@
 * {
     text-shadow: none;
 }
+.ui-btn {
+    border: 1px solid #222 !important;
+}
 .ui-navbar {
-    border-top: 2px solid #222;
+    border-top: 1px solid #222;
 }
 h3 {
     color: #222;
+}
+.clock-btns {
+    display: flex;
+    justify-content: center;
+}
+.clock-btn {
+    border: 2px solid #222 !important;
+    transition: all 0.3s;
 }
 #clock-in {
     width: 50%;
     color: gray;
     background: #98FB98;
-    transition: all 0.3s;
-    border-color: #222;
-    margin: 0 auto;
 }
 #clock-in:hover {
     color: #222;
     background: #D5FDD5;
+}
+#clock-out {
+    display: none;
+    width: 50%;
+    color: white;
+    background: #FF4C4C;
+}
+#clock-out:hover {
+    color: #222;
+    background: #FF6F6F;
 }
