@@ -1,8 +1,21 @@
+* {
+    text-shadow: none;
+}
+.ui-navbar {
+    border-top: 2px solid #222;
+}
+h3 {
+    color: #222;
+}
 #clock-in {
-    background: #98FB98;
-    border-color: #222;
-    border-radius: 100%;
-    padding: 80px 10px;
     width: 50%;
+    color: gray;
+    background: #98FB98;
+    transition: all 0.3s;
+    border-color: #222;
     margin: 0 auto;
+}
+#clock-in:hover {
+    color: #222;
+    background: #D5FDD5;
 }
