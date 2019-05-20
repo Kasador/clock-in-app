@@ -3,28 +3,65 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Clock In App</title>
+	<!-- CSS -->
 	<link rel="stylesheet" href="themes/clockInTheme.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div data-role="page" data-theme="a">
+	<!-- Home Page -->
+	<div data-role="page" data-theme="a" id="home">
 		<div data-role="content" data-theme="a">
-			<h1>test</h1>
+			<h3>Home</h3>
+			<hr>
+			<button id="clock-in">Clock-In</button>
 		</div>
 		<div data-role="footer" data-id="foo1" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="settings.html"><i class="fas fa-cogs"></i><br>Settings</a></li>
-					<li><a href="index.html"><i class="fas fa-home"></i><br>Home</a></li>
-					<li><a href="history.html"><i class="fas fa-clipboard-list"></i><br>History</a></li>
+					<li><a href="#settings"><i class="fas fa-cogs"></i><br>Settings</a></li>
+					<li><a href="#home"><i class="fas fa-home"></i><br>Home</a></li>
+					<li><a href="#history"><i class="fas fa-clipboard-list"></i><br>History</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+	<!-- Settings Page -->
+	<div data-role="page" data-theme="a" id="settings">
+		<div data-role="content" data-theme="a">
+			<h3>Settings</h3>
+		</div>
+		<div data-role="footer" data-id="foo1" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#settings"><i class="fas fa-cogs"></i><br>Settings</a></li>
+					<li><a href="#home"><i class="fas fa-home"></i><br>Home</a></li>
+					<li><a href="#history"><i class="fas fa-clipboard-list"></i><br>History</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- History Page -->
+	<div data-role="page" data-theme="a" id="history">
+		<div data-role="content" data-theme="a">
+			<h3>History</h3>
+		</div>
+		<div data-role="footer" data-id="foo1" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#settings"><i class="fas fa-cogs"></i><br>Settings</a></li>
+					<li><a href="#home"><i class="fas fa-home"></i><br>Home</a></li>
+					<li><a href="#history"><i class="fas fa-clipboard-list"></i><br>History</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- JS -->
+	<script src="js/index.js"></script>
 </body>
 </html>
 
