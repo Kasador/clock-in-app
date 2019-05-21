@@ -71,6 +71,9 @@ $(document).ready(function(){
         hoursIn,
         hoursOut;
 
+    let test1,
+        test2;
+
     $('#clock-in').click(function(){
         // console.log('clocked-in');
 
@@ -102,4 +105,11 @@ $(document).ready(function(){
         console.log('Total: ' + calDiff);
         $('.total').text(calDiff);
     });
+
+
+
+    // test 
+
+    let test = new Date().toLocaleTimeString();
+    console.log(test);
 });
