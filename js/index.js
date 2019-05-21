@@ -24,7 +24,7 @@ $(document).ready(function(){
 
         let timeIn = hours + ":" + minutes + ":" + seconds;
 
-        console.log("Clock-In: " + timeIn);
+        console.log("Clocked-In: " + timeIn);
         $('.time-in').text(timeIn);
     }
     // time out --- time stamp
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
         let timeOut = hours + ":" + minutes + ":" + seconds;
 
-        console.log("Clock-Out: " + timeOut);
+        console.log("Clocked-Out: " + timeOut);
         $('.time-out').text(timeOut);
     }
     // clear time of "time out" if clock-in button has already been pressed
@@ -48,6 +48,9 @@ $(document).ready(function(){
         if (!$('.time-out').text('00:00:00')) {
             $('.time-in').text('00:00:00');
             $('.time-out').text('00:00:00');
+        }
+        if (!$('.total').text('0 hours, 0 minutes, 0 seconds')) {
+            $('.total').text('0 hours, 0 minutes, 0 seconds');
         }
     }
     // today's date at top of pages
@@ -60,4 +63,43 @@ $(document).ready(function(){
     setInterval(function(){
         today();
     }, 1000);
+    // calcuate difference
+    let secondsIn,
+        secondsOut,
+        mintutesIn,
+        mintutesOut,
+        hoursIn,
+        hoursOut;
+
+    $('#clock-in').click(function(){
+        // console.log('clocked-in');
+
+        let clockInDate = new Date();
+        secondsIn = clockInDate.getSeconds();
+        mintutesIn = clockInDate.getMinutes();
+        hoursIn = clockInDate.getHours();
+
+        let total = 'Hr:' + hoursIn + '  Min:' + mintutesIn + '  Sec:' + secondsIn;
+        console.log('Cal-in: ' + total);
+    });
+    $('#clock-out').click(function(){
+        // console.log('clocked-out');
+
+        let clockOutDate = new Date(); 
+        secondsOut = clockOutDate.getSeconds();
+        mintutesOut = clockOutDate.getMinutes();
+        hoursOut = clockOutDate.getHours();
+
+        let total = 'Hr:' + hoursOut + '  Min:' + mintutesOut + '  Sec:' + secondsOut;
+        console.log('Cal-out: ' + total);
+        
+        let calSec = secondsOut - secondsIn,
+            calMin = mintutesOut - mintutesIn,
+            calHr = hoursOut - hoursIn;
+        
+        let calDiff = calHr + " hours, " + calMin + " minutes, " + calSec + " seconds";
+        
+        console.log('Total: ' + calDiff);
+        $('.total').text(calDiff);
+    });
 });
